@@ -400,7 +400,7 @@
                                 </a>
                             </li>
                         @endif
-                        @if (hasPermission('RoleController', 'index'))
+                        {{-- @if (hasPermission('RoleController', 'index'))
                             <li class="nav-item">
                                 <a href="{{ url('roles') }}"
                                     class="nav-link {{ Request::is('roles*') || Request::is('role*') || Request::is('role') ? 'active' : '' }}">
@@ -421,7 +421,7 @@
                                     </p>
                                 </a>
                             </li>
-                        @endif
+                        @endif --}}
                         @if (hasPermission('UserController', 'index') || Auth::user()->type == 'superadmin')
                             <li class="nav-item">
                                 <a href="{{ url('users') }}"
